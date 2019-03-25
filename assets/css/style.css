@@ -1,0 +1,12 @@
+.title {
+    color: gray;
+    size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+#start {
+    color: pink;
+    font-size: 30px;
+    
+}
