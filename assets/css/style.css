@@ -1,9 +1,13 @@
 body {
-    background-image: url("download.jpeg");
+    
     background-repeat: repeat;
     background-color: lightblue;
    }
 
 .title {
+    text-align: center;
+}
+
+.start {
     text-align: center;
 }
