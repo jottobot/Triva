@@ -5,52 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Trivia</title>
 </head>
 
 <body>
 
-    <h1>
-        <div class="title">Trivia Game</div>
-    </h1>
-
-    <!-- start button -->
-    <div id="button1">
-        <button id="start">Start Game</button>
+    <div class="title">
+        <h1>
+            Human Body Trivia
+        </h1>
     </div>
 
-    <div class="game-container">
+    <div class="start">
+        <!-- where start button goes -->
+    </div>
 
-        <!-- quiz content -->
-        <div id="question">
-            <h2>Question:</h2>
-        </div>
+    <form name="myQuiz">
+        1. Which is NOT a muscle in your arm? <br>
+        <input type="radio" name="q1" value="a">Biceps</br>
+        <input type="radio" name="q1" value="b">Triceps</br>
+        <input type="radio" name="q1" value="c">Deltoids</br>
+        <input type="radio" name="q1" value="d">Latisumus Dorsi</br><br>
 
-        <form id="layout">
-        </form>
+        2. In which type of muscle contraction does a muscle fire, but there is no movement at the joint? <br>
+        <input type="radio" name="q2" value="a">Isometric contraction</br>
+        <input type="radio" name="q2" value="b">Eccentric contraction</br>
+        <input type="radio" name="q2" value="c">Freeze contraction</br>
+        <input type="radio" name="q2" value="d">Concentric contraction</br><br> 
 
-        <div id="button2">
-            <button id="next">Next Question</button>
-        </div>
+    </form>
 
-        <!-- time to answer -->
-        <div id="time">
-            Time left to answer:
-        </div>
+    <div class="quiz">
+        <!-- were quiz goes -->
+    </div>
 
-        <div id="progressbar" class="progress-bar progress-bar-striped"></div>
+    <div class="submit">
 
     </div>
-    <div id="results"></div>
+
+    <div class="results">
+        <!-- where results-->
+    </div>
 
 
+    </div>
 
 
-
-    <script src="javascript/app.js"></script>
-
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
 
 </html>
+
+<!-- {
+    title: "In which type of muscle contraction does a muscle fire, but there is no movement at the joint?",
+    choices: ["Isometric contraction", "Eccentric contraction", "Freeze contraction", "Concentric contraction"],
+    answer: "A"
+    },
+-->

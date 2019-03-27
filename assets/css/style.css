@@ -1,12 +1,9 @@
-.title {
-    color: gray;
-    size: 80px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-}
+body {
+    background-image: url("download.jpeg");
+    background-repeat: repeat;
+    background-color: lightblue;
+   }
 
-#start {
-    color: pink;
-    font-size: 30px;
-    
+.title {
+    text-align: center;
 }
