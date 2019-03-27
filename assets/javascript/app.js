@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
- // hides form (questions) at load of page
+  // hides form (questions) at load of page
   $("#myQuiz").hide();
 
   // hides submit button
@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     // hide begin button and image, show quiz/submit button and timer
     $(button1).hide();
-    $("#open-pic").hide();
+    $("#open").hide();
     $("#myQuiz").show();
     $("#button2").show();
     $(".countdown").show();
@@ -39,9 +39,16 @@ $(document).ready(function () {
       $(".countdown").text("Time remaining: " + timeLeft + " seconds");
       timeLeft--;
       if (timeLeft === 0) {
+        // clear timer
         clearInterval(timer);
+        // show time is up
         $(".countdown").html("Time is up!");
-        // $(".results").show();
+        // show message and number correct
+        $("#text").show();
+        $("#correct").show();
+        // hide quiz and submit button
+        $("#myQuiz").hide();
+        $("#button2").hide();
       }
     }, 1000);
   });
@@ -55,7 +62,7 @@ $(document).ready(function () {
 
     if (question1 == "d") {
       correct++;
-      
+
     } else {
       incorrect++;
     }
@@ -81,21 +88,19 @@ $(document).ready(function () {
       range = 0;
 
       $("#text").text(answerMessage[range]);
-  $("#correct").text("You answered " + correct + " correctly.");
-  }
+      $("#correct").text("You answered " + correct + " correctly.");
+    }
 
-  }; $(submitButton).click(check());
+  }; check();
 
-// document.getElementById("picture").src = pictures[range]
-
+  $("#button2").click(function () {
+    $("#myQuiz").hide();
+    $("#text").show();
+    $("#correct").show();
+    $(".submit").hide();
+  });
 
 });
 
 
-
-  $("#button2").click(function () {
-    $("#myQuiz").hide();
-    $(".results").show();
-    $(".submit").hide();
-  });
 

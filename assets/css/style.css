@@ -11,3 +11,18 @@ body {
 .start {
     text-align: center;
 }
+
+.countdown {
+    font-size: 20px;
+    background-color: darkgray;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#myQuiz {
+    word-spacing: 1px;
+    
+}
+
