@@ -22,7 +22,20 @@ body {
 }
 
 #myQuiz {
-    word-spacing: 1px;
-    
+    word-spacing: 1px;  
 }
 
+#text {
+    font-size: 40px;
+    text-align: center;
+    font-family: cursive;
+}
+
+#correct {
+    font-size: 20px;
+    text-align: center;
+}
+
+#open {
+    margin-bottom: 50px;
+}

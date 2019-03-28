@@ -9,6 +9,7 @@ $(document).ready(function () {
   // hides timer
   $(".countdown").hide();
 
+  // hides result and message
   $("#text").hide();
   $("#correct").hide();
 
@@ -18,9 +19,7 @@ $(document).ready(function () {
   // adding text to button
   button1.text("Begin Quiz");
   // appending button1 variable to HTML
-  var startbutton = $(".start").append(button1);
-
-  // opening image
+  var startbutton = $("#button").append(button1);
 
   // hide "begin quiz" button after clicked, but show questions and start timer
   $(button1).click(function () {
@@ -52,6 +51,7 @@ $(document).ready(function () {
         // hide quiz and submit button
         $("#myQuiz").hide();
         $("#button2").hide();
+        $("#open").show();
       }
     }, 1000);
   });
@@ -60,6 +60,7 @@ $(document).ready(function () {
   function check() {
     var question1 = document.myQuiz.q1.value;
     var question2 = document.myQuiz.q2.value;
+    var question3 = document.myQuiz.q3.value;
     var correct = 0;
     var incorrect = 0;
 
@@ -76,32 +77,46 @@ $(document).ready(function () {
       incorrect++;
     }
 
-    var answerMessage = ["You know the body!", "Ah - so close!", "Better luck next time."];
+    if (question3 == "b") {
+      correct++;
+    } else {
+      incorrect++;
+    }
+
+    var answerMessage = ["You know the body!", "Almost! You just missed one...", "Keep studying hard.", "Better luck next time."];
 
     var range;
     if (correct < 1) {
-      range = 2;
+      range = 3;
     }
 
     else if (correct < 2 && correct > 0) {
-      range = 1
+      range = 2;
     }
 
-    else if (correct > 1) {
+    else if (correct > 1 && correct != 3) {
+      range = 1;
+    }
+
+    else if (correct > 2) {
       range = 0;
     }
 
     $("#text").text(answerMessage[range]);
-    $("#correct").text("You answered " + correct + " out of 2 questions correctly.");
+    $("#correct").text("You answered " + correct + " out of 3 questions correctly.");
+
+    $("#button2").click(function () {
+      check();
+      $("#myQuiz").hide();
+      $("#text").show();
+      $("#correct").show();
+      $(".submit").hide();
+      $("#open").show();
+      $(".countdown").hide();
+    });
 
   }; check();
 
-  $("#button2").click(function () {
-    $("#myQuiz").hide();
-    $("#text").show();
-    $("#correct").show();
-    $(".submit").hide();
-  });
 
 });
 
