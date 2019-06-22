@@ -1,41 +1,52 @@
-body {
-    
-    background-repeat: repeat;
-    background-color: lightblue;
-   }
-
-.title {
+/* jumbotron */
+#title {
+    text-align: center;
+}
+.lead {
     text-align: center;
 }
 
-.start {
-    text-align: center;
+/* opening photo */
+#open {
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
+/* begin quiz button */
+#button {
+    margin-bottom: 20px;
+}
+
+/* countdown timer */
 .countdown {
     font-size: 20px;
     background-color: darkgray;
     padding: 10px;
     text-align: center;
     color: white;
+    width: 40%;
+    margin: 0 auto;
     margin-bottom: 40px;
 }
 
+/* quiz */
 #myQuiz {
     word-spacing: 1px;  
 }
 
+#button2 {
+    margin-bottom: 20px;
+}
+
+/* results text */
 #text {
-    font-size: 40px;
+    font-size: 25px;
     text-align: center;
     font-family: cursive;
 }
-
 #correct {
     font-size: 20px;
     text-align: center;
+    margin-bottom: 20px;
 }
 
-#open {
-    margin-bottom: 50px;
-}

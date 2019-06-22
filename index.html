@@ -7,60 +7,84 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Trivia</title>
 </head>
 
 <body>
 
-    <div class="title">
-        <h1>
-            Human Body Trivia
-        </h1>
+    <div class="container">
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4" id="title">Human Body Trivia</h1>
+                <p class="lead">Think you know your body? Take this simple quiz to find out!
+                </p>
+            </div>
+        </div>
+
+        <div class="start">
+            <center>
+                <!-- where start button and opening image goes -->
+                <div>
+                    <img id="open" src="images/tumblr_mf7lx4LzWL1r0bhqjo1_500.jpg" height="350px" , width="auto">
+                </div>
+                <div id="button">
+                </div>
+            </center>
+        </div>
+
+        <div class="countdown">
+            Time remaining: 20 seconds
+        </div>
+
+        <form name="myQuiz" id="myQuiz">
+            1. Which is NOT a muscle in your arm? <br>
+            <input type="radio" name="q1" value="a">Biceps</br>
+            <input type="radio" name="q1" value="b">Triceps</br>
+            <input type="radio" name="q1" value="c">Deltoids</br>
+            <input type="radio" name="q1" value="d">Latisumus Dorsi</br><br>
+
+            2. In which type of muscle contraction does a muscle fire, but there is no movement at the joint? <br>
+            <input type="radio" name="q2" value="a">Isometric contraction</br>
+            <input type="radio" name="q2" value="b">Eccentric contraction</br>
+            <input type="radio" name="q2" value="c">Freeze contraction</br>
+            <input type="radio" name="q2" value="d">Concentric contraction</br><br>
+
+            3. What is the body's main nutritional energy source? <br>
+            <input type="radio" name="q3" value="a">Fat</br>
+            <input type="radio" name="q3" value="b">Carbohydrates</br>
+            <input type="radio" name="q3" value="c">Protein</br>
+            <input type="radio" name="q3" value="d">Sugar</br><br>
+
+            4. How many quadriceps muscles do the legs have total? <br>
+            <input type="radio" name="q4" value="a">2</br>
+            <input type="radio" name="q4" value="b">8</br>
+            <input type="radio" name="q4" value="c">4</br>
+            <input type="radio" name="q4" value="d">6</br><br>
+
+            5. The deepest layer of abdominal muscles are? <br>
+            <input type="radio" name="q5" value="a">Rectus abnominis</br>
+            <input type="radio" name="q5" value="b">6 pack abs</br>
+            <input type="radio" name="q5" value="c">Obliques</br>
+            <input type="radio" name="q5" value="d">Transverse abdominis</br><br>
+
+            <input id="button2" type="button" value="Submit">
+
+        </form>
+
+        <div class="submit">
+        </div>
+
+        <div class="results">
+            <p id="text"></p>
+            <p id="correct"></p>
+        </div>
+
+
     </div>
 
-    <div class="start">
-        <!-- where start button and opening image goes -->
-        <img id="open" src="images/tumblr_mf7lx4LzWL1r0bhqjo1_500.jpg" height="350px" , width="auto">
-        <div id="button"></div>
-    </div>
-
-    <div class="countdown">
-        Time remaining: 10 seconds
-    </div>
-
-    <form name="myQuiz" id="myQuiz">
-        1. Which is NOT a muscle in your arm? <br>
-        <input type="radio" name="q1" value="a">Biceps</br>
-        <input type="radio" name="q1" value="b">Triceps</br>
-        <input type="radio" name="q1" value="c">Deltoids</br>
-        <input type="radio" name="q1" value="d">Latisumus Dorsi</br><br>
-
-        2. In which type of muscle contraction does a muscle fire, but there is no movement at the joint? <br>
-        <input type="radio" name="q2" value="a">Isometric contraction</br>
-        <input type="radio" name="q2" value="b">Eccentric contraction</br>
-        <input type="radio" name="q2" value="c">Freeze contraction</br>
-        <input type="radio" name="q2" value="d">Concentric contraction</br><br>
-
-        3. What is the body's main nutritional energy source? <br>
-        <input type="radio" name="q3" value="a">Fat</br>
-        <input type="radio" name="q3" value="b">Carbohydrates</br>
-        <input type="radio" name="q3" value="c">Protein</br>
-        <input type="radio" name="q3" value="d">Sugar</br><br>
-
-        <input id="button2" type="button" value="Submit">
-
-    </form>
-
-    <div class="submit">
-    </div>
-
-    <div class="results">
-        <p id="text"></p>
-        <p id="correct"></p>
-    </div>
-
-
-    </div>
 
     <script type="text/javascript" src="assets/javascript/app.js"></script>
 

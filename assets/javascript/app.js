@@ -35,7 +35,7 @@ $(document).ready(function () {
       check();
     }, 10000);
 
-    var timeLeft = 10;
+    var timeLeft = 20;
     // start and display timer
     var timer = setInterval(function () {
       $(".countdown").text("Time remaining: " + timeLeft + " seconds");
@@ -43,9 +43,8 @@ $(document).ready(function () {
       if (timeLeft === 0) {
         // clear timer
         clearInterval(timer);
-        // show time is up
-        $(".countdown").html("Time is up!");
         // show message and number correct
+        $(".countdown").hide();
         $("#text").show();
         $("#correct").show();
         // hide quiz and submit button
@@ -61,6 +60,8 @@ $(document).ready(function () {
     var question1 = document.myQuiz.q1.value;
     var question2 = document.myQuiz.q2.value;
     var question3 = document.myQuiz.q3.value;
+    var question4 = document.myQuiz.q4.value;
+    var question5 = document.myQuiz.q5.value;
     var correct = 0;
     var incorrect = 0;
 
@@ -83,27 +84,51 @@ $(document).ready(function () {
       incorrect++;
     }
 
+    if (question4 == "b") {
+      correct++;
+    } else {
+      incorrect++;
+    }
+
+    if (question5 == "d") {
+      correct++;
+    } else {
+      incorrect++;
+    }
+
     var answerMessage = ["You know the body!", "Almost! You just missed one...", "Keep studying hard.", "Better luck next time."];
 
     var range;
+    function message () {
     if (correct < 1) {
       range = 3;
     }
 
     else if (correct < 2 && correct > 0) {
-      range = 2;
+      range = 3;
     }
 
     else if (correct > 1 && correct != 3) {
+      range = 2;
+    }
+
+    else if (correct > 2 && correct != 4) {
+      range = 2;
+    }
+
+    else if (correct < 3 && correct != 5) {
       range = 1;
     }
 
-    else if (correct > 2) {
+    else (correct > 4) 
       range = 0;
-    }
+  
+
+  } message ();
 
     $("#text").text(answerMessage[range]);
-    $("#correct").text("You answered " + correct + " out of 3 questions correctly.");
+    console.log(range);
+    $("#correct").text("You answered " + correct + " out of 5 questions correctly.");
 
     $("#button2").click(function () {
       check();
