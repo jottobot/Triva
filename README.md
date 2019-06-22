@@ -13,6 +13,6 @@ On page load, the user will click "begin quiz" where they are prompted to 5 ques
 * jQuery
 
 ## Deployed at:
-[Click me.](https://jottobot.github.io/TriviaGame/)
+[Click me.](https://jottobot.github.io/Trivia/)
 
 
