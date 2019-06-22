@@ -67,7 +67,6 @@ $(document).ready(function () {
 
     if (question1 == "d") {
       correct++;
-
     } else {
       incorrect++;
     }
@@ -96,42 +95,51 @@ $(document).ready(function () {
       incorrect++;
     }
 
-    var answerMessage = ["You know the body!", "Almost! You just missed one...", "Keep studying hard.", "Better luck next time."];
+    // var answerMessage = ["You know the body!", "Almost! You just missed one...", "Keep studying hard.", "Better luck next time."];
 
-    var range;
-    function message () {
-    if (correct < 1) {
-      range = 3;
-    }
+    function message() {
+      // 0 correct
+      if (correct < 1) {
+        $("#text").text("Better luck next time.");
+      }
 
-    else if (correct < 2 && correct > 0) {
-      range = 3;
-    }
+      // 1 correct
+      else if (correct > 0 && correct < 2) {
+        $("#text").text("Better luck next time.");
+      }
 
-    else if (correct > 1 && correct != 3) {
-      range = 2;
-    }
+      // 2 correct
+      else if
+        (correct > 1 && correct != 3) {
+        $("#text").text("Keep studying hard.");
+      }
 
-    else if (correct > 2 && correct != 4) {
-      range = 2;
-    }
+      // 3 correct
+      else if
+        (correct > 2 && correct != 4 && correct != 5) {
+        $("#text").text("Keep studying hard.");
+      }
 
-    else if (correct < 3 && correct != 5) {
-      range = 1;
-    }
+      // 4 correct
+      // else if
+      //   (correct < 3 && correct != 5) {
+      //   $("#text").text("Almost! You just missed one...");
+      // }
 
-    else (correct > 4) 
-      range = 0;
-  
+      // 5 correct
+      // else {
+      //   $("#text").text("You know the body!");
+      // }
 
-  } message ();
+    } message();
 
-    $("#text").text(answerMessage[range]);
-    console.log(range);
+
+    // message ();
     $("#correct").text("You answered " + correct + " out of 5 questions correctly.");
 
     $("#button2").click(function () {
       check();
+      // message();
       $("#myQuiz").hide();
       $("#text").show();
       $("#correct").show();
